@@ -30,6 +30,10 @@ ko = ["jamo", "nltk"]
 zh = ["jieba", "ordered-set", "pypinyin", "cn2an", "pypinyin-dict"]
 vi = ["num2words", "spacy", "spacy-curated-transformers", "underthesea"]
 he = ["mishkal-hebrew>=0.3.2"]
+kab = []
+# ^ kab.py only uses the Python stdlib (re, unicodedata, dataclasses,
+# pathlib) for now. Add deps here if/when a seq2seq fallback is wired
+# in (e.g. "torch", the way en does for its own fallback path).
 
 [build-system]
 requires = ["hatchling"]
